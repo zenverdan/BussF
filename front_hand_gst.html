@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BussF</title>
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: grey;
+      height: 60px;
+      padding-left: 20px;
+      font-family: 'Courier New', Courier, monospace /* Modify the font family here */
+    }
+    
+    .logo span {
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    
+    .logo span.highlight {
+      color: red;
+    }
+    
+    .left-partition {
+      width: 10%;
+      height: 100vh;
+      background-color: white;
+      float: left;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+    
+    .filter-button {
+      color: black;
+      background-color: lightblue;
+      padding: 10px;
+      border: none;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .filter-button span {
+      margin-right: 50px;
+    }
+    
+    .options {
+      margin-top: 20px;
+      display: none;
+    }
+    
+    .options.show {
+      display: block;
+    }
+    
+    .options button {
+      color: black;
+      font-weight: bold;
+      background-color: lightblue;
+      padding: 10px;
+      border: none;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    .center-partition {
+      width: 60%;
+      height: 100vh;
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .map {
+      width: 100%;
+      height: 400px;
+      background-color: gray; /* Replace with your map code */
+    }
+    
+    .right-partition {
+      width: 20%;
+      height: 100vh;
+      float: right;
+      padding: 20px;
+      border-left: 1px solid #ccc;
+    }
+    
+    .details-heading {
+      margin-top: 0;
+      border-bottom: 1px solid #000;
+      padding-bottom: 5px;
+      display: inline-block;
+      text-decoration: underline;
+    }
+    
+    .centered-content {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function toggleFilterOptions() {
+      var filterOptions = document.getElementById("filter-options");
+      filterOptions.classList.toggle("show");
+    }
+  </script>
+</head>
+<body>
+  <div class="logo">
+    <span>Buss</span> <span class="highlight">F</span>
+  </div>
+  <div class="left-partition">
+    <div class="filter-button" onclick="toggleFilterOptions()">
+      <span>&hellip;</span><span style="font-family: Arial, sans-serif;">Filter</span>
+    </div>
+    <div class="options" id="filter-options">
+      <button>STATE</button>
+      <button>Max Amount</button>
+      <!-- Add more buttons as needed -->
+    </div>
+  </div>
+  <div class="center-partition">
+    <div class="map"></div> <!-- Replace with your map code -->
+  </div>
+  <div class="right-partition">
+    <h2 class="details-heading">Details</h2>
+    <div class="centered-content">
+      <!-- Content for the right partition -->
+    </div>
+  </div>
+</body>
+</html>
